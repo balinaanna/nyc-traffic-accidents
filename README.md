@@ -29,7 +29,7 @@ It applies Excel-based analytics to identify trends, patterns, and potential ris
 4. Standardized column formats:
   - Dates → `Date` format
   - Times → `Time` format
-  - ZIP codes, IDs → `Text`
+  - Borough, ZIP codes, street names, collision IDs, contributing factors, vehicle types → `Text`
   - Lat/Lon → `Number (6 decimals)`
   - Number of kills/injures  → `Number (no decimals)`.
 5. Created **helper columns**:
