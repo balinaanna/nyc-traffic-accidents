@@ -1,5 +1,7 @@
 # NYC Traffic Accidents (Jan–Aug 2020)
 
+![Excel](https://img.shields.io/badge/Microsoft_Excel-217346?logo=microsoftexcel&logoColor=white)
+
 An exploratory data analysis of motor vehicle collisions reported by the New York City Police Department (NYPD) between January and August 2020.  
 This project focuses on identifying monthly trends, temporal patterns, high-risk locations, and common contributing factors.
 
