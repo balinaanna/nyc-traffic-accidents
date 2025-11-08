@@ -1,9 +1,17 @@
-# NYC Traffic Accidents (Jan–Aug 2020)
+# NYC Traffic Accidents (Jan-Aug 2020)
 
 ![Excel](https://img.shields.io/badge/Microsoft_Excel-217346?logo=microsoftexcel&logoColor=white)
 
-An exploratory data analysis of motor vehicle collisions reported by the New York City Police Department (NYPD) between January and August 2020.  
-This project focuses on identifying monthly trends, temporal patterns, high-risk locations, and common contributing factors.
+The project was developed as part of a personal portfolio initiative to practice end-to-end data analysis using real-world open data.  
+It applies Excel-based analytics to identify trends, patterns, and potential risk factors in NYC motor vehicle collisions reported  between January and August 2020.
+
+
+## Skills Demonstrated
+- **Data cleaning and wrangling** in Excel (formatting, handling missing values).  
+- Feature engineering using **formulas** and **helper columns**.  
+- Aggregation and analysis with **Pivot Tables** and **conditional formatting**.  
+- **Visualization** with combo charts, bar charts, and heatmaps.  
+- Analytical storytelling and insight communication through data.  
 
 ## Dataset
 
@@ -13,12 +21,6 @@ This project focuses on identifying monthly trends, temporal patterns, high-risk
 **Columns:** 29
 **Time Period:** January - August 2020  
 **Features include:** date/time, location (borough, zip code, lat/lon), street names, vehicles involved, injuries/fatalities, contributing factors
-
-## Tools used
-- **Microsoft Excel for Web** - data cleaning, transformation, and visualization  
-- **Pivot Tables & Charts** - aggregations and comparisons  
-- **Conditional Formatting** - heatmap visualizations  
-- **GitHub** - portfolio presentation
 
 ## Data Cleaning & Preparation
 1. Used `=ROWS()` and `=COLUMNS()` to check dataset size.
@@ -34,3 +36,6 @@ This project focuses on identifying monthly trends, temporal patterns, high-risk
   - Month, Month Name, Day of Week, Is Fatal (True/False) : `Text`
   - Hour: `Number`
 6. Verified completeness and ensured date range: January – August 2020.
+
+## Analysis & Insights
+
