@@ -2,7 +2,7 @@
 
 ![Excel](https://img.shields.io/badge/Microsoft_Excel-217346?logo=microsoftexcel&logoColor=white)
 
-The project was developed as part of a personal portfolio initiative to practice end-to-end data analysis using real-world open data.  
+The project was developed to practice end-to-end data analysis using real-world open data.  
 It applies Excel-based analytics to identify trends, patterns, and potential risk factors in NYC motor vehicle collisions reported  between January and August 2020.
 
 
@@ -16,9 +16,9 @@ It applies Excel-based analytics to identify trends, patterns, and potential ris
 ## Dataset
 
 **Source**: [NYC OpenData](https://data.cityofnewyork.us/Public-Safety/Motor-Vehicle-Collisions-Crashes/h9gi-nx95) - Motor Vehicle Collisions  
-**Format**: CSV
-**Rows:** 74,881
-**Columns:** 29
+**Format**: CSV  
+**Rows:** 74,881  
+**Columns:** 29  
 **Time Period:** January - August 2020  
 **Features include:** date/time, location (borough, zip code, lat/lon), street names, vehicles involved, injuries/fatalities, contributing factors
 
@@ -38,4 +38,13 @@ It applies Excel-based analytics to identify trends, patterns, and potential ris
 6. Verified completeness and ensured date range: January – August 2020.
 
 ## Analysis & Insights
+
+### 1. Monthly Trends
+
+### 2. Day-Hour Patterns
+
+### 3. High-Rist Locations
+
+### 4. Contributing factors
+
 
