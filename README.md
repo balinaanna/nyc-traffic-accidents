@@ -2,8 +2,7 @@
 
 ![Excel](https://img.shields.io/badge/Microsoft_Excel-217346?logo=microsoftexcel&logoColor=white)
 
-The project was developed to practice end-to-end data analysis using real-world open data.  
-It applies Excel-based analytics to identify trends, patterns, and potential risk factors in NYC motor vehicle collisions reported  between January and August 2020.
+The project was developed to practice end-to-end data analysis using real-world open data. It applies Excel-based analytics to identify trends, patterns, and potential risk factors in NYC motor vehicle collisions reported  between January and August 2020.
 
 
 ## Skills Demonstrated
@@ -40,6 +39,21 @@ It applies Excel-based analytics to identify trends, patterns, and potential ris
 ## Analysis & Insights
 
 ### 1. Monthly Trends
+![Total Accidents by Month](./visuals/total_by_month.jpg)
+
+#### Approach
+
+Created a **Combo Chart (Column + Line)** using a **Pivot Table** to display both **total collisions** (absolute counts) and **percentages of total and fatal accidents** (proportional trends on a secondary axis), aggregated by month. Visualized the relationship between accident **volume** and **severity** over time.
+
+#### Analysis
+
+- Accident frequency was highest in **January** and **February**, then dropped sharply to its lowest point in **April** - aligning with NYC's early COVID-19 lockdown period.
+- Collisions began rising again from **May** onward, reaching a secondary peak in **July** and stabilizing in **August** as mobility resumed.
+- The percentage of **total accidents** mirrored this pattern, showing a significant dip in **April** before recovering mid-year.
+- The percentage of **fatal accidents** increased notably in **June**, even though total crash volume remained moderate - suggesting that fewer **collisions during this period were more severe**.
+
+#### Insights
+- Traffic volume declined during lockdown months, but the higher fatality rate in early summer indicates riskier driving behavior during periods of lighter traffic.
 
 ### 2. Day-Hour Patterns
 
