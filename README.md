@@ -113,7 +113,37 @@ Combined **line and radar charts** to effectively capture both **trend shape** a
 - **Volume risk** is highest on Fridays - more crashes happen.
 - **Severity risk** is higher on Sunday, Tuesday, and Saturday - crashes are more likely to be fatal.
 
-### 3. High-Rist Locations
+### 3. High-Risk Locations
+
+#### Approach
+
+Used a **PivotTable** to group collisions by **ON STREET NAME**.  
+Calculated **total collisions** and **% of all collisions** for each street.  
+Sorted in descending order and extracted the Top 10 streets for visualization.  
+Created a **horizontal bar chart** to highlight the share each location contributes to the citywide total.  
+
+A second PivotTable with a filter `IS FATAL = TRUE` was also created; however, fatal collisions are rare and highly dispersed across locations, resulting in an uninformative Top 10 (mostly 1 fatal crash per street).  
+For this reason, **severity patterns are not meaningful by street**.
+
+<div style="display: flex; align-items: center; gap: 10%;">
+  <img src="./visuals/by_location_pivottable.jpg" style="width: 25%;" />
+  <img src="./visuals/top10_by_location.jpg" style="width: 65%;" />
+</div>
+
+#### Analysis
+
+- **Van Wyck Expressway** is the clear **outlier**, responsible for **3.77%** of all citywide collisions - nearly twice as much as the next street.  
+- The remaining top streets form a tighter **cluster** around **1.3%-2.0%**.  
+
+
+#### Insights
+
+- **Van Wyck Expressway dominates collision activity**, accounting for nearly 4% of all crashes on its own. As one of NYC’s busiest expressways feeding JFK Airport, heavy traffic flow, high speeds, and constant merging create a perfect environment for frequent collisions.
+- **Queens Boulevard** - often referred to historically as the “Boulevard of Death” - appears near the top of the list. Despite years of safety redesigns, its length, complex intersections, and multi-lane structure continue to generate a high collision load.
+- **Rockaway Boulevard and Utica Avenue** serve as major commercial and transit corridors in dense neighborhoods. Their elevated collision percentages reflect constant mixed-use activity: buses, delivery trucks, pedestrians, local traffic, and limited protected infrastructure.
+- The pattern across all streets makes one theme clear:  
+**Collisions concentrate on long, fast, heavily traveled corridors where driver pressure, lane complexity, and traffic intensity overlap.**
+- **Fatal** crashes, on the other hand, are **too dispersed** geographically to identify a clear pattern. This suggests that **severity is more influenced by behavior (speed, impairment, distraction)** than by specific street geometry.
 
 ### 4. Contributing factors
 
