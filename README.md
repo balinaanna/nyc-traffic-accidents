@@ -147,4 +147,59 @@ For this reason, **severity patterns are not meaningful by street**.
 
 ### 4. Contributing factors
 
+#### Approach
 
+Analyzed **why collisions occur, what makes them fatal, and who is most affected**, using **treemaps** for the top causes, a comparison of vehicle types involved in all vs. fatal crashes, and **pie charts** showing the distribution of injuries and fatalities among motorists, pedestrians, and cyclists. 
+
+#### Analysis
+
+##### Causes of All Collisions
+
+<div style="display: flex; align-items: center; justify-content: center;">
+  <img src="./visuals/top10_causes_of_all.jpg" style="width: 100%;  max-width: 600px;" />
+</div>
+
+- **Driver Inattention/Distraction (34.7%)** is the dominant cause of collisions, far outweighing all others.
+- **Following Too Closely (9.4%)** and **Failure to Yield Right-of-Way (8.7%)** reflect congestion-driven, everyday driving mistakes.
+- Improper maneuvers - **Passing Improperly, Unsafe Lane Changes, Backing Unsafely** - collectively form a significant share of crashes.
+- Overall, most collisions stem from **routine driving behavior errors**, not extreme driving.
+
+##### Causes of Fatal Collisions
+
+<div style="display: flex; align-items: center; justify-content: center;">
+  <img src="./visuals/top10_causes_of_fatal.jpg" style="width: 100%;  max-width: 600px;" />
+</div>
+
+- **Unsafe Speed (32%)** becomes the leading cause of fatal crashes, despite its small share of total crashes.
+- **Traffic Control Disregarded (14.6%)** and **Failure to Yield (9.7%)** highlight the danger of violations at intersections.
+- **Driver Inattention (12.6%)** remains a major contributor, but is overshadowed by speed-driven severity.
+- Fatal causes shift from **common errors** to **high-risk behaviors** like speeding and signal violations.
+
+##### Vehicles Most Involved
+
+<div style="display: flex; align-items: center; justify-content: center;">
+  <img src="./visuals/most_involved_vehicle_types.jpg" style="width: 100%;  max-width: 600px;" />
+</div>
+
+- **Sedans and SUVs** dominate crash involvement due to road presence, but their fatal shares are **lower** than their total shares.
+- **Pick-up trucks, box trucks, and buses** show **higher fatal involvement relative to their total share**, linked to size and impact force.
+
+##### Injured/Killed
+
+<div style="display: flex; align-items: center; justify-content: center;">
+  <img src="./visuals/injured_pie.jpg" style="width: 100%;  max-width: 600px;" />
+</div>
+<div style="display: flex; align-items: center; justify-content: center;">
+  <img src="./visuals/killed_pie.jpg" style="width: 100%;  max-width: 600px;" />
+</div>
+
+- Motorists are the majority of road users, so they accumulate most injuries.
+- Pedestrians' fatality share is more than 2.5× their injury share.
+- Cyclists are frequently injured but less represented in fatalities.
+
+#### Insights
+
+- The factors driving collision **frequency** differ from those driving collision **severity**. Everyday mistakes create most crashes, but speed and traffic violations create the deadliest ones.
+- **Vehicle mass/size amplifies severity** - heavier vehicles (buses) produce more fatal outcomes relative to their low crash frequency, while common smaller vehicles (sedans, SUVs) dominate volume but not severity.
+- **Pedestrians are the most at-risk group**, with a fatality share far exceeding their injury share - crashes involving pedestrians are significantly more lethal.
+- **Cyclists' lower fatality share compared to injuries** suggests that lower-speed conditions or protected infrastructure help prevent fatal outcomes.
