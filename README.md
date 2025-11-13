@@ -44,9 +44,7 @@ The project was developed to practice end-to-end data analysis using real-world 
 
 Created a **Combo Chart (Column + Line)** using a **Pivot Table** to display both **total collisions** (absolute counts) and **percentages of total and fatal accidents** (proportional trends on a secondary axis), aggregated by month. Visualized the relationship between accident **volume** and **severity** over time.
 
-<div style="display: flex; align-items: center; justify-content: center;">
-  <img src="./visuals/total_by_month.jpg" style="width: 100%;  max-width: 600px;" />
-</div>
+<img src="./visuals/total_by_month.jpg" width="600" />
 
 #### Analysis
 
@@ -70,7 +68,7 @@ Combined **line and radar charts** to effectively capture both **trend shape** a
 
 
 ##### Heatmap: Accidents Hotspots by Day × Hour
-![Accident Hotspots by Day x Hour](./visuals/total_by_day_of_week_heatmap.jpg)
+<img src="./visuals/total_by_day_of_week_heatmap.jpg" />
 
 - Collision activity is **lowest overnight (1-5 AM)** across all days.
 - A strong **morning peak at 8 AM** appears Monday-Friday, weekends don't exhibit the same 8 AM spike.
@@ -81,12 +79,11 @@ Combined **line and radar charts** to effectively capture both **trend shape** a
 - All days show a consistent **afternoon rise starting at 11 AM** that **peaks between 2–5 PM**.
 
 ##### Accidents Hourly
-<div style="display: flex; align-items: center; justify-content: center;">
-  <img src="./visuals/total_by_hour.jpg" style="width: 100%;  max-width: 600px;" />
-</div>
-<div style="display: flex; align-items: center; gap: 10px;">
-  <img src="./visuals/avg_by_hour.jpg" style="width: 50%;" />
-  <img src="./visuals/avg_by_hour_radar.jpg" style="width: 50%;" />
+
+<img src="./visuals/total_by_hour.jpg" width="50%" />
+<div>
+  <img src="./visuals/avg_by_hour.jpg" width="50%" />
+  <img src="./visuals/avg_by_hour_radar.jpg" width="40%" />
 </div>
 
 - **Collisions are lowest at 2–5 AM**, with the absolute minimum around 4 AM.
@@ -98,7 +95,7 @@ Combined **line and radar charts** to effectively capture both **trend shape** a
 
 
 ##### Total Accidents by Day of Week
-![Total Accidents by Day of Week](./visuals/total_by_day_of_week.jpg)
+<img src="./visuals/total_by_day_of_week.jpg" width="600" />
 
 - **Friday has the highest number of collisions**.
 - **Sunday has the lowest total collisions**.
@@ -125,9 +122,9 @@ Created a **horizontal bar chart** to highlight the share each location contribu
 A second PivotTable with a filter `IS FATAL = TRUE` was also created; however, fatal collisions are rare and highly dispersed across locations, resulting in an uninformative Top 10 (mostly 1 fatal crash per street).  
 For this reason, **severity patterns are not meaningful by street**.
 
-<div style="display: flex; align-items: center; gap: 10%;">
-  <img src="./visuals/by_location_pivottable.jpg" style="width: 25%;" />
-  <img src="./visuals/top10_by_location.jpg" style="width: 65%;" />
+<div>
+  <img src="./visuals/by_location_pivottable.jpg" width="33%" />
+  <img src="./visuals/top10_by_location.jpg" width="65%;" />
 </div>
 
 #### Analysis
@@ -155,9 +152,7 @@ Analyzed **why collisions occur, what makes them fatal, and who is most affected
 
 ##### Causes of All Collisions
 
-<div style="display: flex; align-items: center; justify-content: center;">
-  <img src="./visuals/top10_causes_of_all.jpg" style="width: 100%;  max-width: 600px;" />
-</div>
+<img src="./visuals/top10_causes_of_all.jpg" width="600" />
 
 - **Driver Inattention/Distraction (34.7%)** is the dominant cause of collisions, far outweighing all others.
 - **Following Too Closely (9.4%)** and **Failure to Yield Right-of-Way (8.7%)** reflect congestion-driven, everyday driving mistakes.
@@ -166,9 +161,7 @@ Analyzed **why collisions occur, what makes them fatal, and who is most affected
 
 ##### Causes of Fatal Collisions
 
-<div style="display: flex; align-items: center; justify-content: center;">
-  <img src="./visuals/top10_causes_of_fatal.jpg" style="width: 100%;  max-width: 600px;" />
-</div>
+<img src="./visuals/top10_causes_of_fatal.jpg" width="600" />
 
 - **Unsafe Speed (32%)** becomes the leading cause of fatal crashes, despite its small share of total crashes.
 - **Traffic Control Disregarded (14.6%)** and **Failure to Yield (9.7%)** highlight the danger of violations at intersections.
@@ -177,20 +170,16 @@ Analyzed **why collisions occur, what makes them fatal, and who is most affected
 
 ##### Vehicles Most Involved
 
-<div style="display: flex; align-items: center; justify-content: center;">
-  <img src="./visuals/most_involved_vehicle_types.jpg" style="width: 100%;  max-width: 600px;" />
-</div>
+<img src="./visuals/most_involved_vehicle_types.jpg" width="600" />
 
 - **Sedans and SUVs** dominate crash involvement due to road presence, but their fatal shares are **lower** than their total shares.
 - **Pick-up trucks, box trucks, and buses** show **higher fatal involvement relative to their total share**, linked to size and impact force.
 
 ##### Injured/Killed
 
-<div style="display: flex; align-items: center; justify-content: center;">
-  <img src="./visuals/injured_pie.jpg" style="width: 100%;  max-width: 600px;" />
-</div>
-<div style="display: flex; align-items: center; justify-content: center;">
-  <img src="./visuals/killed_pie.jpg" style="width: 100%;  max-width: 600px;" />
+<div>
+  <img src="./visuals/injured_pie.jpg" width="49%" />
+  <img src="./visuals/killed_pie.jpg" width="49%;" />
 </div>
 
 - Motorists are the majority of road users, so they accumulate most injuries.
