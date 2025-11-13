@@ -39,11 +39,14 @@ The project was developed to practice end-to-end data analysis using real-world 
 ## Analysis & Insights
 
 ### 1. Monthly Trends
-![Total Accidents by Month](./visuals/total_by_month.jpg)
 
 #### Approach
 
 Created a **Combo Chart (Column + Line)** using a **Pivot Table** to display both **total collisions** (absolute counts) and **percentages of total and fatal accidents** (proportional trends on a secondary axis), aggregated by month. Visualized the relationship between accident **volume** and **severity** over time.
+
+<div style="display: flex; align-items: center; justify-content: center;">
+  <img src="./visuals/total_by_month.jpg" style="width: 100%;  max-width: 600px;" />
+</div>
 
 #### Analysis
 
@@ -56,6 +59,59 @@ Created a **Combo Chart (Column + Line)** using a **Pivot Table** to display bot
 - Traffic volume declined during lockdown months, but the higher fatality rate in early summer indicates riskier driving behavior during periods of lighter traffic.
 
 ### 2. Day-Hour Patterns
+
+#### Approach
+
+Summarized collision frequency and severity by day and hour.  
+Visualized overall volume trends across 24 hours.  
+Combined **line and radar charts** to effectively capture both **trend shape** and **circular daily rhythm**.
+
+#### Analysis
+
+
+##### Heatmap: Accidents Hotspots by Day × Hour
+![Accident Hotspots by Day x Hour](./visuals/total_by_day_of_week_heatmap.jpg)
+
+- Collision activity is **lowest overnight (1-5 AM)** across all days.
+- A strong **morning peak at 8 AM** appears Monday-Friday, weekends don't exhibit the same 8 AM spike.
+- The **highest sustained activity** occurs during **2–5 PM** on all days.
+- **Friday** shows the **highest afternoon/evening counts**.
+- **Weekend early mornings (12–3 AM)** show significantly higher collisions than weekdays.
+- **Weekday mornings (7–9 AM)** are markedly busier than weekends.
+- All days show a consistent **afternoon rise starting at 11 AM** that **peaks between 2–5 PM**.
+
+##### Accidents Hourly
+<div style="display: flex; align-items: center; justify-content: center;">
+  <img src="./visuals/total_by_hour.jpg" style="width: 100%;  max-width: 600px;" />
+</div>
+<div style="display: flex; align-items: center; gap: 10px;">
+  <img src="./visuals/avg_by_hour.jpg" style="width: 50%;" />
+  <img src="./visuals/avg_by_hour_radar.jpg" style="width: 50%;" />
+</div>
+
+- **Collisions are lowest at 2–5 AM**, with the absolute minimum around 4 AM.
+- **Sharp increase after 6 AM**, leading to a **strong 8 AM peak** on weekdays, but not weekends.
+- Midday: consistently active (9 AM - 1 PM).
+- Highest overall collisions occur between **2–5 PM**, with **4 PM** peak hour.
+- Evenings: steady decline after **6 PM**.
+- Weekends exceed weekdays only during the evening-night hours **(8 PM–5 AM)**; for all other hours of the day, weekday collisions are consistently higher.
+
+
+##### Total Accidents by Day of Week
+![Total Accidents by Day of Week](./visuals/total_by_day_of_week.jpg)
+
+- **Friday has the highest number of collisions**.
+- **Sunday has the lowest total collisions**.
+- The **% of fatal accidents** line diverges from total volume, indicating that severity is not purely a function of how many crashes occur.
+- **Sunday, Tuesday, and Saturday** all show **higher share of fatal crashes** than their total collision share would suggest.
+- **Friday**, despite having the most collisions, shows a more moderate fatal-share.
+
+#### Insights
+- The city's collision "heartbeat" is classic urban: low at night, sharp morning spike, sustained afternoon peak, tapering into the evening.
+- Nightlife and late-night travel make weekend early mornings riskier than weekday early mornings.
+- Weekday afternoon/early evening, especially Thursday and Friday, is the most collision-dense period of the week.
+- **Volume risk** is highest on Fridays - more crashes happen.
+- **Severity risk** is higher on Sunday, Tuesday, and Saturday - crashes are more likely to be fatal.
 
 ### 3. High-Rist Locations
 
