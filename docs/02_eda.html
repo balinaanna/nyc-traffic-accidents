@@ -8811,31 +8811,197 @@ if (outputEl) {{
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=b39d2e41-5785-4abe-904e-1c90c21269d4">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=b39d2e41-5785-4abe-904e-1c90c21269d4">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [13]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [150]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># streets = df[df["on_street_name"].notna()].copy()</span>
-<span class="c1"># streets["on_street_name"] = streets["on_street_name"].str.strip()</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">streets</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s2">"on_street_name"</span><span class="p">]</span><span class="o">.</span><span class="n">notna</span><span class="p">()]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">streets</span><span class="p">[</span><span class="s2">"on_street_name"</span><span class="p">]</span> <span class="o">=</span> <span class="n">streets</span><span class="p">[</span><span class="s2">"on_street_name"</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
 
-<span class="c1"># top_streets = (</span>
-<span class="c1">#     streets.groupby("on_street_name")</span>
-<span class="c1">#         .agg(total_crashes=("collision_id", "count"))</span>
-<span class="c1">#         .reset_index()</span>
-<span class="c1">#         .sort_values("total_crashes", ascending=False)</span>
-<span class="c1">#         .head(10)</span>
-<span class="c1"># )</span>
+<span class="n">top_streets</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">streets</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">"on_street_name"</span><span class="p">)</span>
+        <span class="o">.</span><span class="n">agg</span><span class="p">(</span><span class="n">total_crashes</span><span class="o">=</span><span class="p">(</span><span class="s2">"collision_id"</span><span class="p">,</span> <span class="s2">"count"</span><span class="p">))</span>
+        <span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+        <span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s2">"total_crashes"</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+        <span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="p">)</span>
 
-<span class="c1"># # Add % of total collisions</span>
-<span class="c1"># total_crashes_citywide = len(df)</span>
-<span class="c1"># top_streets["pct_of_total"] = (top_streets["total_crashes"] / total_crashes_citywide) * 100</span>
+<span class="c1"># Add % of total collisions</span>
+<span class="n">total_crashes_citywide</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+<span class="n">top_streets</span><span class="p">[</span><span class="s2">"pct_of_total"</span><span class="p">]</span> <span class="o">=</span> <span class="nb">round</span><span class="p">((</span><span class="n">top_streets</span><span class="p">[</span><span class="s2">"total_crashes"</span><span class="p">]</span> <span class="o">/</span> <span class="n">total_crashes_citywide</span><span class="p">)</span> <span class="o">*</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
 
-<span class="c1"># top_streets</span>
+<span class="n">top_streets</span>
 </pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[150]:</div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>on_street_name</th>
+<th>total_crashes</th>
+<th>pct_of_total</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>942</th>
+<td>BELT PARKWAY</td>
+<td>1241</td>
+<td>1.66</td>
+</tr>
+<tr>
+<th>2403</th>
+<td>LONG ISLAND EXPRESSWAY</td>
+<td>745</td>
+<td>0.99</td>
+</tr>
+<tr>
+<th>1051</th>
+<td>BROOKLYN QUEENS EXPRESSWAY</td>
+<td>738</td>
+<td>0.99</td>
+</tr>
+<tr>
+<th>1834</th>
+<td>FDR DRIVE</td>
+<td>728</td>
+<td>0.97</td>
+</tr>
+<tr>
+<th>2455</th>
+<td>MAJOR DEEGAN EXPRESSWAY</td>
+<td>591</td>
+<td>0.79</td>
+</tr>
+<tr>
+<th>1976</th>
+<td>GRAND CENTRAL PKWY</td>
+<td>581</td>
+<td>0.78</td>
+</tr>
+<tr>
+<th>1031</th>
+<td>BROADWAY</td>
+<td>575</td>
+<td>0.77</td>
+</tr>
+<tr>
+<th>742</th>
+<td>ATLANTIC AVENUE</td>
+<td>532</td>
+<td>0.71</td>
+</tr>
+<tr>
+<th>1322</th>
+<td>CROSS BRONX EXPY</td>
+<td>526</td>
+<td>0.70</td>
+</tr>
+<tr>
+<th>1325</th>
+<td>CROSS ISLAND PARKWAY</td>
+<td>512</td>
+<td>0.68</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=de2f975e-8d09-4130-8d52-ed055a14c05f">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [155]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">Figure</span><span class="p">()</span>
+
+<span class="n">fig</span><span class="o">.</span><span class="n">add_trace</span><span class="p">(</span><span class="n">go</span><span class="o">.</span><span class="n">Bar</span><span class="p">(</span>
+    <span class="n">x</span><span class="o">=</span><span class="n">top_streets</span><span class="p">[</span><span class="s2">"pct_of_total"</span><span class="p">],</span>
+    <span class="n">y</span><span class="o">=</span><span class="n">top_streets</span><span class="p">[</span><span class="s2">"on_street_name"</span><span class="p">],</span>
+    <span class="n">orientation</span><span class="o">=</span><span class="s2">"h"</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">"Share of Total Collisions (%)"</span><span class="p">,</span>
+    <span class="n">text</span><span class="o">=</span><span class="n">top_streets</span><span class="p">[</span><span class="s2">"pct_of_total"</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span> <span class="o">+</span> <span class="s2">"%"</span><span class="p">,</span>
+    <span class="n">textposition</span><span class="o">=</span><span class="s2">"outside"</span>
+<span class="p">))</span>
+
+<span class="n">fig</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span>
+    <span class="n">title</span><span class="o">=</span><span class="s2">"Top 10 Streets by Collision Frequency"</span><span class="p">,</span>
+    <span class="n">xaxis_title</span><span class="o">=</span><span class="s2">"Share of Total Collisions (%)"</span><span class="p">,</span>
+    <span class="n">yaxis_title</span><span class="o">=</span><span class="s2">"Street"</span><span class="p">,</span>
+    <span class="n">template</span><span class="o">=</span><span class="s2">"plotly_white"</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+<div> <div class="plotly-graph-div" id="0b40533c-d6a6-43da-bb37-f8bc1540be8b" style="height:525px; width:100%;"></div> <script type="text/javascript">                require(["plotly"], function(Plotly) {                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("0b40533c-d6a6-43da-bb37-f8bc1540be8b")) {                    Plotly.newPlot(                        "0b40533c-d6a6-43da-bb37-f8bc1540be8b",                        [{"name":"Share of Total Collisions (%)","orientation":"h","text":["1.66%","0.99%","0.99%","0.97%","0.79%","0.78%","0.77%","0.71%","0.7%","0.68%"],"textposition":"outside","x":[1.66,0.99,0.99,0.97,0.79,0.78,0.77,0.71,0.7,0.68],"y":["BELT PARKWAY","LONG ISLAND EXPRESSWAY","BROOKLYN QUEENS EXPRESSWAY","FDR DRIVE","MAJOR DEEGAN EXPRESSWAY","GRAND CENTRAL PKWY","BROADWAY","ATLANTIC AVENUE","CROSS BRONX EXPY","CROSS ISLAND PARKWAY"],"type":"bar"}],                        {"template":{"data":{"barpolar":[{"marker":{"line":{"color":"white","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"white","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"#C8D4E3","linecolor":"#C8D4E3","minorgridcolor":"#C8D4E3","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"#C8D4E3","linecolor":"#C8D4E3","minorgridcolor":"#C8D4E3","startlinecolor":"#2a3f5f"},"type":"carpet"}],"choropleth":[{"colorbar":{"outlinewidth":0,"ticks":""},"type":"choropleth"}],"contourcarpet":[{"colorbar":{"outlinewidth":0,"ticks":""},"type":"contourcarpet"}],"contour":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"contour"}],"heatmapgl":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"heatmapgl"}],"heatmap":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"heatmap"}],"histogram2dcontour":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"histogram2dcontour"}],"histogram2d":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"histogram2d"}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"mesh3d":[{"colorbar":{"outlinewidth":0,"ticks":""},"type":"mesh3d"}],"parcoords":[{"line":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"parcoords"}],"pie":[{"automargin":true,"type":"pie"}],"scatter3d":[{"line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatter3d"}],"scattercarpet":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattercarpet"}],"scattergeo":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattergeo"}],"scattergl":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattergl"}],"scattermapbox":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattermapbox"}],"scatterpolargl":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatterpolargl"}],"scatterpolar":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatterpolar"}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"scatterternary":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatterternary"}],"surface":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"surface"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}]},"layout":{"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"autotypenumbers":"strict","coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]],"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]},"colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"geo":{"bgcolor":"white","lakecolor":"white","landcolor":"white","showlakes":true,"showland":true,"subunitcolor":"#C8D4E3"},"hoverlabel":{"align":"left"},"hovermode":"closest","mapbox":{"style":"light"},"paper_bgcolor":"white","plot_bgcolor":"white","polar":{"angularaxis":{"gridcolor":"#EBF0F8","linecolor":"#EBF0F8","ticks":""},"bgcolor":"white","radialaxis":{"gridcolor":"#EBF0F8","linecolor":"#EBF0F8","ticks":""}},"scene":{"xaxis":{"backgroundcolor":"white","gridcolor":"#DFE8F3","gridwidth":2,"linecolor":"#EBF0F8","showbackground":true,"ticks":"","zerolinecolor":"#EBF0F8"},"yaxis":{"backgroundcolor":"white","gridcolor":"#DFE8F3","gridwidth":2,"linecolor":"#EBF0F8","showbackground":true,"ticks":"","zerolinecolor":"#EBF0F8"},"zaxis":{"backgroundcolor":"white","gridcolor":"#DFE8F3","gridwidth":2,"linecolor":"#EBF0F8","showbackground":true,"ticks":"","zerolinecolor":"#EBF0F8"}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"ternary":{"aaxis":{"gridcolor":"#DFE8F3","linecolor":"#A2B1C6","ticks":""},"baxis":{"gridcolor":"#DFE8F3","linecolor":"#A2B1C6","ticks":""},"bgcolor":"white","caxis":{"gridcolor":"#DFE8F3","linecolor":"#A2B1C6","ticks":""}},"title":{"x":0.05},"xaxis":{"automargin":true,"gridcolor":"#EBF0F8","linecolor":"#EBF0F8","ticks":"","title":{"standoff":15},"zerolinecolor":"#EBF0F8","zerolinewidth":2},"yaxis":{"automargin":true,"gridcolor":"#EBF0F8","linecolor":"#EBF0F8","ticks":"","title":{"standoff":15},"zerolinecolor":"#EBF0F8","zerolinewidth":2}}},"title":{"text":"Top 10 Streets by Collision Frequency"},"xaxis":{"title":{"text":"Share of Total Collisions (%)"}},"yaxis":{"title":{"text":"Street"}}},                        {"responsive": true}                    ).then(function(){
+                            
+var gd = document.getElementById('0b40533c-d6a6-43da-bb37-f8bc1540be8b');
+var x = new MutationObserver(function (mutations, observer) {{
+        var display = window.getComputedStyle(gd).display;
+        if (!display || display === 'none') {{
+            console.log([gd, 'removed!']);
+            Plotly.purge(gd);
+            observer.disconnect();
+        }}
+}});
+
+// Listen for the removal of the full notebook cells
+var notebookContainer = gd.closest('#notebook-container');
+if (notebookContainer) {{
+    x.observe(notebookContainer, {childList: true});
+}}
+
+// Listen for the clearing of the current output cell
+var outputEl = gd.closest('.output');
+if (outputEl) {{
+    x.observe(outputEl, {childList: true});
+}}
+
+                        })                };                });            </script> </div>
 </div>
 </div>
 </div>
