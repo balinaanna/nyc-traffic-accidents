@@ -40,12 +40,12 @@ The pet project was developed to practice **end-to-end data analysis** using rea
 
 This **Python implementation** transforms static Excel analysis into a **scalable**, **reusable**, and **reproducible** analytics workflow - a critical skillset for modern data roles.
 
-#### 🔗 [01_data_preparation.ipynb](./notebooks/01_data_preparation.ipynb) - Data Cleaning and Feature Engineering
+#### 🔗 [01_data_preparation.ipynb](./python_analysis/notebooks/01_data_preparation.ipynb) - Data Cleaning and Feature Engineering
 
 This notebook prepares the dataset for analysis:
-**Output** - [nyc_traffic_accidents_clean.csv](./data/nyc_traffic_accidents_clean.csv)
+**Output** - [nyc_traffic_accidents_clean.csv](./python_analysis/data/nyc_traffic_accidents_clean.csv)
 
-#### 🔗 [02_eda.ipynb](../docs/02_eda.html) - Exploratory Data Analysis
+#### 🔗 [02_eda.ipynb](https://balinaanna.github.io/nyc-traffic-accidents/02_eda.html) - Exploratory Data Analysis
 
 This notebook performs the full exploratory analysis on the cleaned dataset.
 
