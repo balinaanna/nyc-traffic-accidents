@@ -1,13 +1,5 @@
 # Excel Implementation
 
-## Skills Demonstrated
-
-- **Data cleaning and wrangling** in Excel (formatting, handling missing values).
-- **Feature engineering** using **formulas** and **helper columns**.
-- Aggregation and analysis with **Pivot Tables** and **conditional formatting**.
-- **Visualization** with combo charts, bar charts, and heatmaps.
-- **Analytical storytelling** and insight communication through data.
-
 ## Data Cleaning & Preparation
 
 1. Used `=ROWS()` and `=COLUMNS()` to check dataset size.
@@ -117,23 +109,22 @@ A second PivotTable with a filter `IS FATAL = TRUE` was also created; however, f
 For this reason, **severity patterns are not meaningful by street**.
 
 <div>
-  <img src="./visuals/by_location_pivottable.jpg" width="33%" />
-  <img src="./visuals/top10_by_location.jpg" width="65%;" />
+  <img src="./visuals/scatterplot_by_location.jpg" width="40%" />
+  <img src="./visuals/top10_by_location.jpg" width="58%;" />
 </div>
 
 #### Analysis
 
-- **Van Wyck Expressway** is the clear **outlier**, responsible for **3.77%** of all citywide collisions - nearly twice as much as the next street.
-- The remaining top streets form a tighter **cluster** around **1.3%-2.0%**.
+- **Belt Parkway** records the highest collision count at **1.66%** of all crashes, though only slightly above several other major corridors.
+- The remaining top locations form a **tight cluster**, each contributing roughly **0.7%-1.0%**.
+- Overall, collision volume is **distributed across multiple high-traffic roadways**, with no single location standing out as a strong outlier.
 
 #### Insights
 
-- **Van Wyck Expressway dominates collision activity**, accounting for nearly 4% of all crashes on its own. As one of NYC’s busiest expressways feeding JFK Airport, heavy traffic flow, high speeds, and constant merging create a perfect environment for frequent collisions.
-- **Queens Boulevard** - often referred to historically as the “Boulevard of Death” - appears near the top of the list. Despite years of safety redesigns, its length, complex intersections, and multi-lane structure continue to generate a high collision load.
-- **Rockaway Boulevard and Utica Avenue** serve as major commercial and transit corridors in dense neighborhoods. Their elevated collision percentages reflect constant mixed-use activity: buses, delivery trucks, pedestrians, local traffic, and limited protected infrastructure.
-- The pattern across all streets makes one theme clear:  
-  **Collisions concentrate on long, fast, heavily traveled corridors where driver pressure, lane complexity, and traffic intensity overlap.**
-- **Fatal** crashes, on the other hand, are **too dispersed** geographically to identify a clear pattern. This suggests that **severity is more influenced by behavior (speed, impairment, distraction)** than by specific street geometry.
+- The highest collision volumes occur on **major expressways and large arterials**.
+- **Belt Parkway** leads the list, but only by a small margin - reinforcing that collisions are **distributed across multiple high-demand corridors** rather than concentrated in a single hotspot.
+- The overall pattern shows that collision risk is shaped less by any specific street and more by **roadway function**: high-speed expressways and high-activity arterials consistently produce more crashes due to structural and behavioral pressures.
+- **Fatal crashes remain too dispersed** across the network to identify meaningful location-based severity patterns - suggesting that **driver behavior (speed, impairment, distraction)** has a larger effect on severity than roadway geometry.
 
 ### 4. Contributing factors
 
@@ -147,8 +138,8 @@ Analyzed **why collisions occur, what makes them fatal, and who is most affected
 
 <img src="./visuals/top10_causes_of_all.jpg" width="600" />
 
-- **Driver Inattention/Distraction (34.7%)** is the dominant cause of collisions, far outweighing all others.
-- **Following Too Closely (9.4%)** and **Failure to Yield Right-of-Way (8.7%)** reflect congestion-driven, everyday driving mistakes.
+- **Driver Inattention/Distraction (25.6%)** is the dominant cause of collisions, far outweighing all others.
+- **Following Too Closely (7%)** and **Failure to Yield Right-of-Way (6.5%)** reflect congestion-driven, everyday driving mistakes.
 - Improper maneuvers - **Passing Improperly, Unsafe Lane Changes, Backing Unsafely** - collectively form a significant share of crashes.
 - Overall, most collisions stem from **routine driving behavior errors**, not extreme driving.
 
